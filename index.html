@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luna Profile Stats</title>
+    <title>GitHub Profile Stats</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,6 +12,7 @@
             color: #e0e0e0;
             padding: 20px;
             margin: 0;
+            transition: background-color 0.3s, color 0.3s;
         }
         h1 {
             text-align: center;
@@ -37,7 +38,7 @@
         button:hover {
             background-color: #3700b3;
         }
-        #profile, #repos {
+        #profile, #repos, #chart {
             background-color: #1e1e1e;
             border-radius: 5px;
             padding: 20px;
@@ -61,16 +62,25 @@
         li {
             margin: 10px 0;
         }
+        .theme-toggle {
+            margin: 20px auto;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <h1>GitHub Profile Stats</h1>
+    <div class="theme-toggle">
+        <button id="themeToggle">Switch to Light Theme</button>
+    </div>
     <input type="text" id="username" placeholder="Enter GitHub username" />
     <button id="fetchBtn">Get Stats</button>
     
     <div id="profile"></div>
+    <div id="chart"></div>
     <div id="repos"></div>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
