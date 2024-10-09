@@ -18,9 +18,15 @@ document.getElementById('fetchBtn').onclick = async () => {
         profileDiv.innerHTML = `
             <h2>${userData.login}</h2>
             <img src="${userData.avatar_url}" alt="${userData.login}" width="100" />
-            <p>Followers: ${userData.followers}</p>
-            <p>Following: ${userData.following}</p>
-            <p>Public Repos: ${userData.public_repos}</p>
+            <p><strong>Bio:</strong> ${userData.bio || 'N/A'}</p>
+            <p><strong>Company:</strong> ${userData.company || 'N/A'}</p>
+            <p><strong>Location:</strong> ${userData.location || 'N/A'}</p>
+            <p><strong>Blog:</strong> <a href="${userData.blog}" target="_blank">${userData.blog || 'N/A'}</a></p>
+            <p><strong>Followers:</strong> ${userData.followers}</p>
+            <p><strong>Following:</strong> ${userData.following}</p>
+            <p><strong>Public Repos:</strong> ${userData.public_repos}</p>
+            <p><strong>Public Gists:</strong> ${userData.public_gists}</p>
+            <p><strong>Account Created:</strong> ${new Date(userData.created_at).toLocaleDateString()}</p>
         `;
 
         const reposResponse = await fetch(`https://api.github.com/users/${username}/repos`);
