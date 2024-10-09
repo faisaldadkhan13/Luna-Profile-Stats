@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Stats</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input, button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            width: calc(100% - 22px);
+        }
+        input {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+        button {
+            background-color: #6200ea;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3700b3;
+        }
+        #profile, #repos {
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        img {
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #bb86fc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub Profile Stats</h1>
+    <input type="text" id="username" placeholder="Enter GitHub username" />
+    <button id="fetchBtn">Get Stats</button>
+    
+    <div id="profile"></div>
+    <div id="repos"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
